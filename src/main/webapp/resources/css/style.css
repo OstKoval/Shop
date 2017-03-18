@@ -1,0 +1,181 @@
+.container{
+	width: 1170px;
+	margin: auto;
+}
+body{
+	padding-top: 130px;
+}
+header{
+	background: #fafafa;
+	border-bottom: 1px solid #eee;
+	padding-top: 18px;
+	padding-bottom: 5px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 110;
+}
+.logo{
+	width: 64px;
+	height: 64px;
+}
+.input-group, .btn-group{
+	padding-top: 8px;
+}
+
+.header-basket_block {
+  cursor: pointer;
+  position: relative;
+  color: #0853a2; 
+}
+
+.header-basket_block .basket-circle {
+	position: absolute;
+	background: blue;
+	color: white;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	left: 27px;
+	bottom: 27px;
+	top: -10px; 
+}
+
+
+.header-basket {
+  background: #add965;
+  color: white;
+  margin-right: 10px;
+  padding: 11px;
+  border-radius: 7px; 
+}
+
+
+
+.wrap-basked {
+  position: relative;
+  margin-top: 3px;
+}    
+
+.slides{
+
+}
+.product1{
+
+	background:url(../img/smart.jpg)  no-repeat center;
+}
+.product2{
+	background: url(../img/Other_Photo_and_Video.jpg.png) no-repeat center;
+}
+.product3{
+	background: url(../img/TV.jpg) no-repeat center;
+}
+.item{
+	height:600px;
+	
+	background-size: cover;
+}
+
+.product-types{
+	margin-top: 40px;
+}
+
+.products{
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.thumbnail{
+	height: 482px;
+}
+.thumbnail2{
+	position: relative;
+	margin-top: 30px;
+}
+.delete-but{
+	position: absolute;
+	top:-16px;
+	right:-16px;
+}
+
+.thumbnail>img{
+	display:block;
+	margin:auto;
+	height:300px;
+}
+.caption>h3{
+	height: 50px;
+}
+.dropdown-menu>li>a{
+	cursor: pointer;
+}
+
+/*****Product review*******/
+.product-photo{
+	width: 90%;
+	height: 450px;
+	margin: auto;
+}
+.product-photo>img{
+	display: block;
+	height: 300px;
+	background: grey;
+	margin: auto;
+
+}
+.product-descr{
+	padding-left:30px;
+	padding-right: 50px;
+	height: 450px;
+	position: relative;
+}
+.product-descr>h2{
+	padding-top: 0;
+}
+.cart-add{
+	position: absolute;
+	right: 0;
+	width: 100%;
+	bottom:0;
+}
+.cart-add p{
+	font-size:20px;
+	padding-left: 15px;
+}
+/******Search error******/
+.search-error{
+	color:red;
+	font-size: 28px;
+	text-align: center;
+}
+.cart-header{
+	text-align: center;
+}
+.add-success{
+
+}
+.success-content{
+	display: none;
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+	background: url("../img/checked.png");
+	border-radius: 50%;
+}
+.red{
+	color:red;
+}
+.success-added{
+	padding-right: 40px;
+	position: relative;
+}
+.success-added>.success-content{
+	display: block;
+	position: absolute;
+	right: 5px;
+	top:4px;
+}
+tr:first-child{
+	font-weight: bold;
+	background-color: #C6C9C4;
+}
