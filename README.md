@@ -16,4 +16,4 @@ As user(example: email: ostapkovalchuk1997@gmail.com, password:drogobitch ):
 
 
 Frameworks used: Spring MVC, Hibernate.
-Oriented time, spend on making the project: 125 hours.
+Oriented time, spend on making the project: 135 hours.
