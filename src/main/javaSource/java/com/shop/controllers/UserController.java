@@ -57,15 +57,13 @@ public class UserController {
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public ModelAndView registerUserAccount(
             @ModelAttribute("user") @Valid UserDto accountDto,
-            BindingResult result) {
+            BindingResult result) throws EmailExistsException {
 
         UserDto registered = new UserDto();
         if (!result.hasErrors()) {
-            try {
+
                 registered = userService.registerNewUserAccount(accountDto);
-            } catch (EmailExistsException e) {
-                e.printStackTrace();
-            }
+
         }
         if (registered == null) {
             result.rejectValue("email", "Invalid email");

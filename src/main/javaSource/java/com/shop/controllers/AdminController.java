@@ -50,22 +50,18 @@ public class AdminController {
     }
 
     @RequestMapping(value = "/admin/users/{email}/delete", method = RequestMethod.GET)
-    public void deleteUser(@PathVariable("email") String email, HttpServletResponse response) {
-        try {
+    public void deleteUser(@PathVariable("email") String email) throws InvalidEmailException {
+
             userService.deleteUserByEmail(email);
-        } catch (InvalidEmailException e) {
-            response.setStatus(404);
-        }
+
     }
 
     @RequestMapping(value = "/admin/products/{name}/delete", method = RequestMethod.GET)
-    public void deleteProduct(@PathVariable("name") String name, HttpServletResponse response) {
+    public void deleteProduct(@PathVariable("name") String name) throws InvalidProductName {
 
-        try {
+
             productService.deleteProduct(name);
-        } catch (InvalidProductName invalidProductName) {
-            response.setStatus(404);
-        }
+
     }
 
     @RequestMapping(value = "/admin/products", method = RequestMethod.GET)
@@ -127,7 +123,7 @@ public class AdminController {
     public String addProduct(@Valid @ModelAttribute("product") ProductDto product,
                              @RequestParam("imageFile") CommonsMultipartFile imageFile,
                              BindingResult result,
-                             RedirectAttributes redirectAttributes) throws IOException {
+                             RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
             return "/admin/add";
         }

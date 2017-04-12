@@ -105,7 +105,4 @@ public class ProductDAOImpl extends AbstractDAO<Integer, Product> implements Pro
         return criteria.list();
     }
 
-    public void addProduct(String user, String product) {
-
-    }
 }
