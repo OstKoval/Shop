@@ -58,12 +58,9 @@ public class UserController {
     public ModelAndView registerUserAccount(
             @ModelAttribute("user") @Valid UserDto accountDto,
             BindingResult result) throws EmailExistsException {
-
         UserDto registered = new UserDto();
         if (!result.hasErrors()) {
-
                 registered = userService.registerNewUserAccount(accountDto);
-
         }
         if (registered == null) {
             result.rejectValue("email", "Invalid email");
@@ -146,7 +143,6 @@ public class UserController {
     @RequestMapping(value = "/cart/{name}", method = RequestMethod.GET)
     @ResponseBody
     public Boolean deleteFormCart(@PathVariable("name") String name, Principal principal) {
-
         userService.deleteFromCart(principal.getName(), name);
         return true;
     }

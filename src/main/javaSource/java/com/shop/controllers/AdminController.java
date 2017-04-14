@@ -35,7 +35,6 @@ public class AdminController {
 
     @RequestMapping(value = {"/admin/users"}, method = RequestMethod.GET)
     public String listOfUsers(ModelMap model) {
-
         List<UserDto> users = userService.findAllUsers();
         users = users.stream().peek(u -> u.setPassword(null)).collect(Collectors.toList());
         model.addAttribute("users", users);
@@ -51,17 +50,12 @@ public class AdminController {
 
     @RequestMapping(value = "/admin/users/{email}/delete", method = RequestMethod.GET)
     public void deleteUser(@PathVariable("email") String email) throws InvalidEmailException {
-
             userService.deleteUserByEmail(email);
-
     }
 
     @RequestMapping(value = "/admin/products/{name}/delete", method = RequestMethod.GET)
     public void deleteProduct(@PathVariable("name") String name) throws InvalidProductName {
-
-
             productService.deleteProduct(name);
-
     }
 
     @RequestMapping(value = "/admin/products", method = RequestMethod.GET)
@@ -92,7 +86,6 @@ public class AdminController {
     public String updateProduct(@ModelAttribute("product") ProductDto productDto,
                                 @RequestParam("imageFile") CommonsMultipartFile imageFile,
                                 BindingResult result, @PathVariable int id) {
-
         if (result.hasErrors()) {
             return "updateProduct";
         }
